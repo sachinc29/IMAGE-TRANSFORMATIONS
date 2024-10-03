@@ -45,13 +45,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the image
-image = cv2.imread('football.jpeg')
+image = cv2.imread('skull.jpg')
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Convert BGR to RGB for Matplotlib
 plt.subplot()
 plt.imshow(image_rgb)
 plt.title("Original Image")
 plt.axis('off')
 ```
+![image](https://github.com/user-attachments/assets/5a7df274-0f7b-4291-ad60-cb15752cb000)
+
 ### i)Image Translation
 ```python
 rows, cols, _ = image.shape
@@ -62,6 +64,8 @@ plt.imshow(translated_image)
 plt.title("Translated Image")
 plt.axis('off')
 ```
+![image](https://github.com/user-attachments/assets/c800c23e-a510-4ce0-a351-10a7014ec5d7)
+
 ### ii) Image Scaling
 ```python
 scaled_image = cv2.resize(image_rgb, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_LINEAR)  # Scale by 1.5x
@@ -70,6 +74,8 @@ plt.imshow(translated_image)
 plt.title("Translated Image")
 plt.axis('off')
 ```
+![image](https://github.com/user-attachments/assets/93b9f998-55a3-4e19-82e7-493512f13d31)
+
 ### iii)Image shearing
 ```python
 M_shear = np.float32([[1, 0.5, 0], [0.5, 1, 0]])  # Shear with factor 0.5
@@ -79,6 +85,8 @@ plt.imshow(sheared_image)
 plt.title("Sheared Image")
 plt.axis('off')
 ```
+![image](https://github.com/user-attachments/assets/fe99cb6b-e41a-4a48-82cb-abd2f1c7692a)
+
 ### iv)Image Reflection
 ```python
 reflected_image = cv2.flip(image_rgb, 1)  # Horizontal reflection (flip along y-axis)
@@ -87,6 +95,7 @@ plt.imshow(reflected_image)
 plt.title("Reflected Image")
 plt.axis('off')
 ```
+![image](https://github.com/user-attachments/assets/276b4936-1850-4060-870a-051321a07f35)
 
 ### v)Image Rotation
 ```python
@@ -97,7 +106,7 @@ plt.imshow(rotated_image)
 plt.title("Rotated Image")
 plt.axis('off')
 ```
-
+![image](https://github.com/user-attachments/assets/eca51447-7d55-44eb-b1ea-d68142d778df)
 
 ### vi)Image Cropping
 ```python
@@ -108,41 +117,7 @@ plt.title("Cropped Image")
 plt.axis('off')
 plt.show()
 ```
-## Output:
-### i)Image Translation
-
-![image](https://github.com/user-attachments/assets/4ef15972-8c35-41e2-b8bb-2347b51114de)
-
-### ii) Image Scaling
-
-![image](https://github.com/user-attachments/assets/d15362a7-d021-4ecc-8e10-11b9596f4b96)
-
-
-
-### iii)Image shearing
-
-![image](https://github.com/user-attachments/assets/35bb3c77-5b42-4def-a375-4f62317543df)
-
-
-
-### iv)Image Reflection
-
-
-![image](https://github.com/user-attachments/assets/69322202-5411-4cf3-9a81-60678398dac0)
-
-
-
-### v)Image Rotation
-
-![image](https://github.com/user-attachments/assets/2fc7256f-ffd8-48d4-8482-20bdd92e44e4)
-
-
-
-### vi)Image Cropping
-
-
-![image](https://github.com/user-attachments/assets/54ae65ee-5b99-4a38-9915-a3a48e479d02)
-
+![image](https://github.com/user-attachments/assets/0a54b788-a3b7-4a56-b876-ab895b443db9)
 
 
 ## Result: 
